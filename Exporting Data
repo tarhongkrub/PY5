@@ -1,0 +1,24 @@
+# --- โค้ดส่วนต่อท้าย สำหรับส่งออกข้อมูลไป Blender ---
+print("Exporting Data to Blender...")
+
+# สร้าง Array ว่างๆ เพื่อเก็บพิกัดของทุกจุดในทุกๆ เฟรม
+# ขนาด: (จำนวนเฟรม, จำนวนอนุภาค, 3 แกน XYZ)
+history_pos = np.zeros((steps, pos.shape[0], 3))
+
+# รัน Physics Loop ล้วนๆ เพื่อความรวดเร็ว
+for i in range(steps):
+    vel += acc * dt / 2.0
+    pos += vel * dt
+    acc = compute_accel_numba(pos, mass, G, eps_sq)
+    vel += acc * dt / 2.0
+    
+    # บันทึกพิกัดของเฟรมปัจจุบัน
+    history_pos[i] = pos.copy()
+    
+    if i % 100 == 0:
+        print(f"คำนวณเสร็จแล้ว {i}/{steps} เฟรม")
+
+# บันทึกเป็นไฟล์ .npy
+file_name = "galaxy_data.npy"
+np.save(file_name, history_pos)
+print(f"บันทึกไฟล์ {file_name} loading Success")
