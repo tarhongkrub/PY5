@@ -1,0 +1,56 @@
+import bpy
+import numpy as np
+import os
+
+# ==========================================
+# 1. ตั้งค่าที่อยู่ไฟล์ (เปลี่ยน Path ตรงนี้ให้ตรงกับในคอมของคุณ)
+# ==========================================
+# ข้อควรระวัง: ใน Windows ให้ใช้ตัวอักษร r นำหน้าเครื่องหมายคำพูดเสมอ
+FILE_PATH = r"C:\ที่อยู่ของโฟลเดอร์\PY5\src\galaxy_data.npy"
+
+print("Loading Data...")
+data = np.load(FILE_PATH)
+frames, num_particles, _ = data.shape
+
+# ==========================================
+# 2. สร้างวัตถุ (Mesh) และจุดอนุภาค (Vertices)
+# ==========================================
+# สร้าง Mesh ว่างๆ
+mesh = bpy.data.meshes.new(name="Galaxy_Particles")
+obj = bpy.data.objects.new("Galaxy_Simulation", mesh)
+bpy.context.collection.objects.link(obj)
+
+# นำพิกัดเฟรมแรกมาสร้างจุด (หาร 10 เพื่อย่อสเกลไม่ให้ใหญ่ทะลุจอ Blender)
+scale_factor = 0.1
+vertices = (data[0] * scale_factor).tolist()
+mesh.from_pydata(vertices, [], [])
+mesh.update()
+
+# ==========================================
+# 3. สร้าง Animation (ด้วย Shape Keys)
+# ==========================================
+print("Baking Animation to Shape Keys...")
+# สร้าง Basis Shape Key (รูปร่างตั้งต้น)
+sk_basis = obj.shape_key_add(name="Basis")
+
+# วนลูปเพื่อสร้าง Keyframe ให้แต่ละเฟรม
+for f in range(1, frames):
+    sk = obj.shape_key_add(name=f"Frame_{f}")
+    
+    # อัปเดตตำแหน่งจุดในเฟรมนั้นๆ
+    for i in range(num_particles):
+        sk.data[i].co = data[f, i] * scale_factor
+
+    # สั่ง Keyframe ให้แสดงผล 100% เฉพาะตอนที่ถึงเฟรมของตัวเอง
+    sk.value = 0.0
+    sk.keyframe_insert(data_path="value", frame=f-1)
+    
+    sk.value = 1.0
+    sk.keyframe_insert(data_path="value", frame=f)
+    
+    sk.value = 0.0
+    sk.keyframe_insert(data_path="value", frame=f+1)
+
+# ตั้งค่าความยาวของ Timeline ให้พอดีกับจำนวนเฟรม
+bpy.context.scene.frame_end = frames
+print("Import to Blender Completed Successfully!")
