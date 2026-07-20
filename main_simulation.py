@@ -9,8 +9,8 @@ from scipy.spatial.transform import Rotation
 UNIT_LENGTH_KPC = 2.0
 # สมมติ: 1 Time Step = ~10 ล้านปี (Myr) โดยประมาณ
 
-N_disk = 2400  # ดาวในจาน
-N_bulge = 500  # ดาวในใจกลาง
+N_disk = 2400  # ดาวในจาน Adjustable
+N_bulge = 500  # ดาวในใจกลาง Adjustable
 G = 1.0
 dt = 0.01
 steps = 800
