@@ -1,9 +1,9 @@
 # Milky Way and Andromeda Galaxy Collision Simulation
 **Science Project: The Development of a Mathematical Model to Study the Dynamics and Orbital Trajectories in the Milky Way and Andromeda Galaxy Collision**
-Wirithpol Kanjana-alongkorn
-Photiphat Rattanarangsiwat
-Advisor: Mr. Tawatchai Suklom
-Institution: Suankularb Wittayalai School
+**Wirithpol Kanjana-alongkorn**
+**Photiphat Rattanarangsiwat**
+**Advisor: Mr. Tawatchai Suklom**
+**Institution: Suankularb Wittayalai School**
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
 ![Numba](https://img.shields.io/badge/Optimized_with-Numba-orange.svg)
