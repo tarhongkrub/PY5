@@ -21,7 +21,7 @@ This project focuses on developing an N-body dynamical simulation to study the c
 *   **3D Visualization:** Exported coordinate data to render realistic 3D animations using `Blender 4.4`.
 
 ## Results and Visualization
-(https://s6.ezgif.com/tmp/ezgif-6c00b8e823f82a56.gif)
+[https://s6.ezgif.com/tmp/ezgif-6c00b8e823f82a56.gif]
 
 ### 1. Morphological Evolution
 ![Galaxy Collision Render](media/your_blender_render.gif)
