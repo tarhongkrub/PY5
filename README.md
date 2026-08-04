@@ -11,12 +11,12 @@
 
 ---
 
-## 🌌 About The Project
+## About The Project
 This project focuses on developing an N-body dynamical simulation to study the collision and merger of the Milky Way and Andromeda galaxies[cite: 1, 2]. Based on observational data from the Hubble Space Telescope and Gaia satellite, these two massive galaxies are approaching each other and are predicted to merge in the future[cite: 1, 2]. Because this cosmic event spans billions of years, computer simulations using numerical methods are indispensable[cite: 1]. The model successfully processes a system of **5,801 mass particles** under limited computational resources while maintaining high physical realism[cite: 1, 2].
 
 ---
 
-## ⚙️ Key Features and Methodology
+## Key Features and Methodology
 * **Physics Engine & Leapfrog Integration:** Implemented a symplectic Leapfrog integration method for its time-reversibility, ensuring long-term energy conservation and stability[cite: 1].
 * **Gravitational Softening:** Applied a softening parameter ($\epsilon$) into the force calculation to prevent infinite gravitational forces (singularities) during close particle encounters[cite: 1].
 * **Parallel Computing:** Accelerated CPU processing performance to match C-compiled languages using Just-In-Time (JIT) compilation via the `Numba` library[cite: 1].
@@ -25,7 +25,7 @@ This project focuses on developing an N-body dynamical simulation to study the c
 
 ---
 
-## 📊 Results and Visualization
+## Results and Visualization
 
 [https://s6.ezgif.com/tmp/ezgif-6c00b8e823f82a56.gif]
 
