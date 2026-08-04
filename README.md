@@ -27,7 +27,8 @@ This project focuses on developing an N-body dynamical simulation to study the c
 
 ## Results and Visualization
 
-![Galaxy Collision Render](media/https://ezgif.com/save/ezgif-6c00b8e823f82a56.gif)
+![Galaxy Collision Render](media/<img width="800" height="213" alt="ezgif com-video-to-gif-converter (2)" src="https://github.com/user-attachments/assets/577f178e-ae5e-4935-a0b4-dbca610964b7" />
+)
 
 ### 1. Morphological Evolution
 (https://s6.ezgif.com/tmp/ezgif-6c00b8e823f82a56.gif)  
