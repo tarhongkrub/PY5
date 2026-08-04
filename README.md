@@ -19,7 +19,7 @@ This project focuses on developing an N-body dynamical simulation to study the c
 ## Key Features and Methodology
 * **Physics Engine & Leapfrog Integration:** Implemented a symplectic Leapfrog integration method for its time-reversibility, ensuring long-term energy conservation and stability.
 * **Gravitational Softening:** Applied a softening parameter ($\epsilon$) into the force calculation to prevent infinite gravitational forces (singularities) during close particle encounters.
-* **Parallel Computing:** Accelerated CPU processing performance to match C-compiled languages using Just-In-Time (JIT) compilation via the `Numba` library[cite: 1].
+* **Parallel Computing:** Accelerated CPU processing performance to match C-compiled languages using Just-In-Time (JIT) compilation via the `Numba` library.
 * **System Validation:** Rigorously cross-verified against fundamental conservation laws (total energy and angular momentum) and pre-collision Keplerian trajectories.
 * **3D Visualization:** Exported 3D spatial coordinates and RGB color datasets to render realistic morphological evolutions using **Blender 4.4**.
 
@@ -27,7 +27,7 @@ This project focuses on developing an N-body dynamical simulation to study the c
 
 ## Results and Visualization
 
-![Galaxy Collision Render](media/https://s6.ezgif.com/tmp/ezgif-6c00b8e823f82a56.gif)
+![Galaxy Collision Render](media/https://ezgif.com/save/ezgif-6c00b8e823f82a56.gif)
 
 ### 1. Morphological Evolution
 (https://s6.ezgif.com/tmp/ezgif-6c00b8e823f82a56.gif)  
