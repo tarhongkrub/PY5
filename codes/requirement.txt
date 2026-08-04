@@ -1,0 +1,13 @@
+# การคำนวณทางคณิตศาสตร์ การจัดการ Array และไฟล์
+numpy
+
+# การทำ Parallel Computing เพื่อเร่งความเร็ว Physics Engine
+numba
+
+# การพล็อตแผนภาพและกราฟตรวจสอบความถูกต้อง
+matplotlib
+
+# การคำนวณทางวิทยาศาสตร์และคณิตศาสตร์ขั้นสูง
+scipy
+
+สามารถDownloadผ่านTerminal โดยคำสั่ง pip install ชื่อโมดูล
