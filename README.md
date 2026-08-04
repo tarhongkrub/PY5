@@ -39,7 +39,7 @@ This project focuses on developing an N-body dynamical simulation to study the c
 4. **Complete Merger:** At approximately 5.5 billion years, the galactic cores coalesce into a single center, resulting in the formation of a newly established elliptical galaxy.
 
 ### 2. Energy Drift & System Stability
-![Energy Drift Plot](media/https://1drv.ms/i/c/1885e1794a1f1ed6/IQBnkWUiNqEiR5Ck5FZS9B_EAQUIil7REwP8qHa9_jqzIJQ?e=r4SXE)
+![Energy Drift Plot](media/https://1drv.ms/i/c/1885e1794a1f1ed6/IQBnkWUiNqEiR5Ck5FZS9B_EAQUIil7REwP8qHa9_jqzIJQ?e=5QXkAd)
 * **Energy Conservation:** The calculated total energy drift throughout the simulation was **6.12%**, meaning the total energy deviates from the initial value by 6.12% due to limitations of numerical integration in high-density regions, which remains within an acceptable threshold.
 * **Angular Momentum:** The total angular momentum of the solitary galaxy system remained constant over time, confirming that the system is free from external torques and verifying model stability.
 
