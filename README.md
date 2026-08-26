@@ -22,6 +22,7 @@ This project focuses on developing an N-body dynamical simulation to study the c
 * **Parallel Computing:** Accelerated CPU processing performance to match C-compiled languages using Just-In-Time (JIT) compilation via the `Numba` library.
 * **System Validation:** Rigorously cross-verified against fundamental conservation laws (total energy and angular momentum) and pre-collision Keplerian trajectories.
 * **3D Visualization:** Exported 3D spatial coordinates and RGB color datasets to render realistic morphological evolutions using **Blender 4.4**.
+* **HUBBLE SPACE Telescope's** datasets applied for Andromeda galaxy physics properties 
 
 ---
 
